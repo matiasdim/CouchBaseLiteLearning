@@ -66,8 +66,23 @@ class ViewController: UIViewController {
     
     func updateDocument(database: CBLDatabase, documentID: String) -> Void
     {
-        let document: CBLDocument = database.document(withID: documentID)
-        0
+        let document: CBLDocument?
+        document = database.document(withID: documentID)
+        var docContent: [String:String] = document?.properties as! [String : String]
+        docContent["description"] = "Anyone is invited!"
+        docContent["address"] = "123 Elm St."
+        
+        let newRevision: CBLSavedRevision? = try! document?.putProperties(docContent)?
+        
+        if newRevision != nil {
+            
+            print("Document created and written to database, ID = %@", document.documentID)
+            
+        }
+        
+
+
+
     }
 
 
