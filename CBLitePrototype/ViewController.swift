@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         if newRevision != nil {
             print("Document created and written to database, ID = %@", docID)
         }
-        
+        updateDocument(database: database, documentID: docID)
     }
     
     func updateDocument(database: CBLDatabase, documentID: String) -> Void
@@ -72,11 +72,9 @@ class ViewController: UIViewController {
         docContent["description"] = "Anyone is invited!"
         docContent["address"] = "123 Elm St."
         
-        let newRevision: CBLSavedRevision? = try! document?.putProperties(docContent)?
-        
+        let newRevision: CBLSavedRevision? = try! document?.putProperties(docContent)
         if newRevision != nil {
-            
-            print("Document created and written to database, ID = %@", document.documentID)
+            print("Document created and written to database, properties = %@", document!.properties)
             
         }
         
