@@ -13,6 +13,14 @@
 		2368776D1ECDE33D00B8AA9B /* CBLitePrototype.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2368776B1ECDE33D00B8AA9B /* CBLitePrototype.xcdatamodeld */; };
 		2368776F1ECDE33D00B8AA9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2368776E1ECDE33D00B8AA9B /* Assets.xcassets */; };
 		236877721ECDE33D00B8AA9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236877701ECDE33D00B8AA9B /* LaunchScreen.storyboard */; };
+		2368777C1ECDE39200B8AA9B /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2368777B1ECDE39200B8AA9B /* CouchbaseLite.framework */; };
+		2368777F1ECDE3D200B8AA9B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2368777E1ECDE3D200B8AA9B /* CFNetwork.framework */; };
+		236877811ECDE3D600B8AA9B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236877801ECDE3D600B8AA9B /* Security.framework */; };
+		236877831ECDE3DC00B8AA9B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236877821ECDE3DC00B8AA9B /* SystemConfiguration.framework */; };
+		236877851ECDE3E400B8AA9B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 236877841ECDE3E400B8AA9B /* libsqlite3.tbd */; };
+		236877871ECDE3EC00B8AA9B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 236877861ECDE3EC00B8AA9B /* libz.tbd */; };
+		236877891ECDE3F300B8AA9B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 236877881ECDE3F300B8AA9B /* libc++.tbd */; };
+		2368778C1ECE1E6E00B8AA9B /* CBObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2368778B1ECE1E6E00B8AA9B /* CBObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,15 @@
 		2368776E1ECDE33D00B8AA9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		236877711ECDE33D00B8AA9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		236877731ECDE33D00B8AA9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2368777B1ECDE39200B8AA9B /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
+		2368777E1ECDE3D200B8AA9B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		236877801ECDE3D600B8AA9B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		236877821ECDE3DC00B8AA9B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		236877841ECDE3E400B8AA9B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		236877861ECDE3EC00B8AA9B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		236877881ECDE3F300B8AA9B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		2368778A1ECDE48800B8AA9B /* CBLitePrototype-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBLitePrototype-Bridging-Header.h"; sourceTree = "<group>"; };
+		2368778B1ECE1E6E00B8AA9B /* CBObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236877891ECDE3F300B8AA9B /* libc++.tbd in Frameworks */,
+				236877871ECDE3EC00B8AA9B /* libz.tbd in Frameworks */,
+				236877851ECDE3E400B8AA9B /* libsqlite3.tbd in Frameworks */,
+				236877831ECDE3DC00B8AA9B /* SystemConfiguration.framework in Frameworks */,
+				236877811ECDE3D600B8AA9B /* Security.framework in Frameworks */,
+				2368777F1ECDE3D200B8AA9B /* CFNetwork.framework in Frameworks */,
+				2368777C1ECDE39200B8AA9B /* CouchbaseLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +66,7 @@
 			children = (
 				236877631ECDE33D00B8AA9B /* CBLitePrototype */,
 				236877621ECDE33D00B8AA9B /* Products */,
+				2368777D1ECDE3D200B8AA9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,31 @@
 		236877631ECDE33D00B8AA9B /* CBLitePrototype */ = {
 			isa = PBXGroup;
 			children = (
+				2368777B1ECDE39200B8AA9B /* CouchbaseLite.framework */,
 				236877641ECDE33D00B8AA9B /* AppDelegate.swift */,
 				236877661ECDE33D00B8AA9B /* ViewController.swift */,
+				2368778B1ECE1E6E00B8AA9B /* CBObjects.swift */,
 				236877681ECDE33D00B8AA9B /* Main.storyboard */,
 				2368776E1ECDE33D00B8AA9B /* Assets.xcassets */,
 				236877701ECDE33D00B8AA9B /* LaunchScreen.storyboard */,
 				236877731ECDE33D00B8AA9B /* Info.plist */,
+				2368778A1ECDE48800B8AA9B /* CBLitePrototype-Bridging-Header.h */,
 				2368776B1ECDE33D00B8AA9B /* CBLitePrototype.xcdatamodeld */,
 			);
 			path = CBLitePrototype;
+			sourceTree = "<group>";
+		};
+		2368777D1ECDE3D200B8AA9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				236877881ECDE3F300B8AA9B /* libc++.tbd */,
+				236877861ECDE3EC00B8AA9B /* libz.tbd */,
+				236877841ECDE3E400B8AA9B /* libsqlite3.tbd */,
+				236877821ECDE3DC00B8AA9B /* SystemConfiguration.framework */,
+				236877801ECDE3D600B8AA9B /* Security.framework */,
+				2368777E1ECDE3D200B8AA9B /* CFNetwork.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2368776D1ECDE33D00B8AA9B /* CBLitePrototype.xcdatamodeld in Sources */,
+				2368778C1ECE1E6E00B8AA9B /* CBObjects.swift in Sources */,
 				236877671ECDE33D00B8AA9B /* ViewController.swift in Sources */,
 				236877651ECDE33D00B8AA9B /* AppDelegate.swift in Sources */,
 			);
@@ -268,10 +310,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PT98H6A5CY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CBLitePrototype",
+				);
 				INFOPLIST_FILE = CBLitePrototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matias.gil.CBLitePrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CBLitePrototype/CBLitePrototype-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -281,10 +329,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PT98H6A5CY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CBLitePrototype",
+				);
 				INFOPLIST_FILE = CBLitePrototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matias.gil.CBLitePrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CBLitePrototype/CBLitePrototype-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
