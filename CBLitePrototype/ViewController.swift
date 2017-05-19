@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let cbo = CBObjects.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -48,8 +49,9 @@ class ViewController: UIViewController {
     
     func helloCBL() -> Void
     {
-        let cbo = CBObjects.sharedInstance
+        
         createDocument(database: cbo.database)
+        startReplications()
     }
     
     func createDocument(database: CBLDatabase) -> Void
@@ -74,14 +76,40 @@ class ViewController: UIViewController {
         
         let newRevision: CBLSavedRevision? = try! document?.putProperties(docContent)
         if newRevision != nil {
-            print("Document created and written to database, properties = %@", document!.properties)
+            print("Document created and written to database, properties = %@", document!.properties as Any)
             
         }
-        
-
-
+        //deleteDocument(database: database, documentId: documentID)
 
     }
+    
+    func deleteDocument(database: CBLDatabase, documentId: String) -> Void
+    {
+        let document: CBLDocument?
+        document = database.document(withID: documentId)
+        try! document?.delete()
+        
+        if (database.document(withID: documentId) == nil){
+            print ("Right!")
+        }
+    }
+    
+    func startReplications() -> Void
+    {
+        let syncURL: NSURL = NSURL(string: "http://127.0.0.1:4984/couchbaseevents/")!
+        let pull: CBLReplication = cbo.database.createPullReplication(syncURL as URL)
+        let push: CBLReplication = cbo.database.createPushReplication(syncURL as URL)
+        let auth: CBLAuthenticatorProtocol?
+        auth = CBLAuthenticator.basicAuthenticator(withName: "couchbase_user", password: "mobile")
+        pull.authenticator = auth
+        push.authenticator = auth
+        pull.continuous = true
+        push.continuous = true
+        pull.start()
+        push.start()
+        
+    }
+
 
 
 
